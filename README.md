@@ -2,11 +2,15 @@
 
 This repo contains our codes for the paper ["Super Tickets in Pre-Trained Language Models: From Model Compression to Improving Generalization"](https://arxiv.org/abs/2105.12002) (ACL 2021).
 
+</br>
+
 ## Getting Start
 1. python3.6 </br>
    Reference to download and install : https://www.python.org/downloads/release/python-360/
 2. install requirements </br>
    ```> pip install -r requirements.txt```
+
+</br>
 
 ## Data
 1. Download data </br>
@@ -15,6 +19,8 @@ This repo contains our codes for the paper ["Super Tickets in Pre-Trained Langua
 2. Preprocess data </br>
    ```> sh experiments/glue/prepro.sh```</br>
 For more data processing details, please refer to this [repo](https://github.com/namisan/mt-dnn).
+
+</br>
 
 ## Verifying Phase Transition Phenomenon
 1. Fine-tune a pre-trained BERT model with single task data, compute importance scores, and generate one-shot structured pruning masks at multiple sparsity levels. E.g., for MNLI, run </br>
@@ -28,6 +34,8 @@ For more data processing details, please refer to this [repo](https://github.com
    ```
 You may try tasks with smaller sizes (e.g., SST, MRPC, RTE) to see a more pronounced phase transition.
 
+
+</br>
 
 ## Multi-task Learning (MTL) with Tickets Sharing
 1. Identify a set of super tickets for each individual task.
@@ -62,6 +70,8 @@ You may try tasks with smaller sizes (e.g., SST, MRPC, RTE) to see a more pronou
    ./scripts/train_mtdnn.sh GPUID
    ```
 
+</br>
+
 ## MTL Benchmark
 
 MTL evaluation results on GLUE dev set averaged over 5 random seeds.
@@ -74,6 +84,8 @@ MTL evaluation results on GLUE dev set averaged over 5 random seeds.
 | Tickets-Share, large |  86.7/86.0  |  92.1  |  91.3/88.4  |  93.2 |   88.4/91.5   | 61.8  |  89.2/89.1  |  80.5  |  85.4  | 83.3% |
 
 
+
+</br>
 
 ## Citation
 
@@ -92,6 +104,8 @@ MTL evaluation results on GLUE dev set averaged over 5 random seeds.
   year={2020}
 }
 ```
+
+</br>
 
 ## Contact Information
 For help or issues related to this package, please submit a GitHub issue. For personal questions related to this paper, please contact Chen Liang (cliang73@gatech.edu).
